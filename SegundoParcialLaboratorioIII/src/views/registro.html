@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="./scripts/registro.js"></script>
+    
+    <title>Registro</title>
+</head>
+<body style="background-color:rgb(153, 167,184); ;">
+
+    <div class="container">
+
+        
+        <span style="font-size: 300%;text-align:left;color:rgb(51, 115, 253)">REGISTRO</span><br><br>
+        <div class="alert col-4 alert-danger hide" id="errorReg"></div>
+
+                <form action="" id="registerForm" method="post" class="col-md-4 well form-horizontal" style="background-color:lightgrey;">
+                    
+                    <div class="form-group">
+                            
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                    <span class="input-group-addon"><i class="fas fa-envelope"></i></span>
+                                <input type="text" name="regcorreo" id="regcorreo" class="form-control" placeholder="Correo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fas fa-key"></i></span>
+                                <input type="password" name="regpassword" id="regpassword" class="form-control" placeholder="Clave">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                                    
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fas fa-user"></i></span>
+                                <input type="text" name="regnombre" id="regnombre" class="form-control" placeholder="Nombre">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fas fa-user"></i></span>
+                                <input type="text" name="regapellido" id="regapellido" class="form-control" placeholder="Apellido">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                            <div class="inputGroupContainer">
+                                <div class="input-group">
+                                        <span class="input-group-addon"><i class="fas fa-id-card"></i></span>
+                                        <select id="regperfil" name="regperfil" class="form-control form-control-selectpicker"> 
+                                                <option value="">Seleccionar Perfil</option>
+                                                <option value="Propietario">Propietario</option>
+                                                <option value="Encargado">Encargado</option>
+                                                <option value="Empleado">Empleado</option>
+                                        </select>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                            
+                            <div class="inputGroupContainer">
+                                <div class="input-group">
+                                        <span class="input-group-addon"><i class="fas fa-camera"></i></span>
+                                    <input name="regfoto" class="form-control" type="file" id="regfoto">
+                                </div>
+                            </div>
+                    </div>
+        
+                    <div class="form-group">
+                            
+                            <button class="btn btn-success col-md-5" type="button" id="btnEnviarRegistro" onclick="SegundoParcial.Registro.AltaUsuario()">
+                                Registrar
+                            </button>
+                            <label class="control-label col-md-2"></label>
+                            <button class="btn btn-warning col-md-5" style="color: black;" type="reset">
+                                Limpiar
+                            </button>
+                    </div>
+        
+                </form>
+    </div>
+
+</body>
+</html>
